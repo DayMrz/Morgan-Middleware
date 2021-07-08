@@ -1,0 +1,28 @@
+Install an own json package 
+    ==============================
+    npm init -y
+    ==============================
+
+install express package and require it, create an app, so we can use express through it.
+
+    ================================
+    npm i express 
+    ================================
+    index.js
+    ======================
+        const express = require('express');
+        const app = express();
+
+install morgan package
+
+    =============================
+    npm i morgan
+    =============================
+    to use it: 
+    index.js
+    =============================
+        app.use(() => {
+            console.log("HEy!")
+        }) //this allow me to run every code, and every single request
+   *check code to use.app(morgan('tiny)) // as the docs show
+   
