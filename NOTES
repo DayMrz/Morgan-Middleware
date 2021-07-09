@@ -79,3 +79,9 @@ password middleware template.
     but, what we want is to set an specific route, so we can protected it 
 
     check app.use('/secret)....
+
+========================================
+Protecting Specific Routes
+========================================
+
+    our app.use(...) for password can be saved in a variable, so it can be called when needed in the routes we want to execute. 

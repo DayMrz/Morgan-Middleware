@@ -9,13 +9,13 @@ app.use((req, res, next) => {
     next()
 })
 
-app.use((req, res, next) => {
+const verifyPassword = (req, res, next) => {
     const { password } = req.query;
     if (password === 'Dabadirabada') {
         next()
     }
     res.send('YOU NEED A PASSWORD')
-})
+}
 
 app.use('/dogs', (req, res, next) => {
     console.log('Dogs are cute <3')
@@ -33,7 +33,7 @@ app.get('/dogs', (req, res) => {
     res.send('Wof')
 })
 
-app.get('/secret', (req, res) => {
+app.get('/secret', verifyPassword, (req, res) => {
     res.send('Pudding has three eyes and wants to kill Sanji at the weeding')
 })
 
